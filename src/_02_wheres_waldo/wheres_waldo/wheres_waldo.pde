@@ -4,19 +4,21 @@ AudioSample doh;
 AudioSample woohoo;
 
 void setup() {
-  PImage waldo = loadImage("waldo.jpg"); // Change this to match your file name.
-  size(500, 500);
+  PImage waldo = loadImage("findwaldo.jpg"); // Change this to match your file name.
+  size(1000, 700);
   image(waldo, 0, 0);
-  doh = minim.loadSample("homer-doh.wav"); //drag and drop from project onto sketch
-  woohoo = minim.loadSample("homer-woohoo.wav"); //drag and drop from project onto sketch } 
+  //doh = minim.loadSample("homer-doh.wav"); //drag and drop from project onto sketch
+  //woohoo = minim.loadSample("homer-woohoo.wav"); //drag and drop from project onto sketch } 
 }
 
 void draw() {
       // Use this print statement to find out the coordinates of Waldo
-      // println("X: " + mouseX + " Y: " + mouseY); 
-
+           println(492-528 + mouseX + 507-512 + mouseY); 
       // If the mouse is on Waldo, print “Waldo found!”
-
+if(mouseX>492&&mouseX<528){
+if(mouseY>507&&mouseY<512){
+    println("Waldo found");}
+    playWoohoo();}
       // If Waldo is found, also use the method below to play “Woohoo”
       // Change the name of the sound file if you need to 
       // If the mouse is pressed and they’re not on Waldo, play “Doh”
