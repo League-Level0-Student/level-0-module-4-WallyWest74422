@@ -12,7 +12,7 @@ void setup() {
   minecraft.resize(500, 500);          //in setup method
   //in setup method
   creeper=loadImage("creeper.png");     //in setup method
-  creeper.resize(5, 5);     //in setup method
+  creeper.resize(3, 3);     //in setup method
 }
 
 void draw() {
@@ -24,7 +24,8 @@ void draw() {
     if(isNear(mouseX, creperx)&& isNear(mouseY,crepery)){
       fill(#00FF01);
       JOptionPane.showMessageDialog(null,"Congrats! You found a creper!");
-  
+  creperx=(int)random(width);
+crepery=(int)random(width);
     }}
 }
 boolean isNear(int a, int b) {
